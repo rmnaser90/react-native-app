@@ -1,16 +1,22 @@
 {
   "scripts": {
-    "start": "react-native start",
+    "build":"expo build:web",
+    "start": "node server.js",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "eject": "expo eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "axios": "^0.21.1",
     "expo": "~40.0.0",
     "expo-splash-screen": "~0.8.0",
     "expo-status-bar": "~1.0.3",
     "expo-updates": "~0.4.0",
+    "express": "^4.17.1",
+    "mobx": "^6.0.4",
+    "mobx-react": "^7.0.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "~0.63.4",
@@ -18,11 +24,7 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-screens": "~2.15.0",
     "react-native-unimodules": "~0.12.0",
-    "react-native-web": "~0.13.12",
-    "@material-ui/core": "^4.11.2",
-    "axios": "^0.21.1",
-    "mobx": "^6.0.4",
-    "mobx-react": "^7.0.5"
+    "react-native-web": "~0.13.12"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
@@ -33,5 +35,6 @@
   },
   "private": true,
   "name": "react-native-app",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "type": "module"
 }
