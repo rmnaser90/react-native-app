@@ -1,13 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
+import { Provider } from 'mobx-react';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import MainComponent from './src/MainComponent';
+import MainStore from './src/store/MainStore'
+
+const mainStore = new MainStore()
+const store = {mainStore}
+
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider {...store}>
+      <View style={styles.container}>
+      <MainComponent/>
+      </View>
+    </Provider>
   );
 }
 
